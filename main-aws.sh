@@ -104,7 +104,7 @@ fi
 nodetool repair
 if [ $? -eq 0 ]
     then
-        echo "Nodetool is successful. Patching complete. Quitting..."
+        echo "Nodetool repair is successful."
     else
         echo "Repair job is not complete. Quitting..."
 fi
@@ -113,7 +113,7 @@ fi
 systemctl enable scylla-server
 if [ $? -eq 0 ]
     then
-        echo "Scylla server service is enabled"
+        echo "Scylla server service is enabled. Patching operations completed. Success."
     else
         echo "Error. Quitting..."
 fi
